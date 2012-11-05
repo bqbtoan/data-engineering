@@ -1,0 +1,10 @@
+<h2>Import Orders</h2>
+<% if flash[:error] %>
+  <p class="error"><%= flash[:error] %></p>
+<% end %>
+<%= form_tag({:action => :create}, :multipart => true) do %>
+  Please select a file to upload: <%= file_field_tag 'file' %>
+  <p>
+    <%= submit_tag "Upload Orders" %>
+  </p>
+<% end %>
